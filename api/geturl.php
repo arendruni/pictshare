@@ -32,7 +32,7 @@ if(!$url || !startsWith($url, 'http'))
 else if(remote_filesize($url)*0.000001 > 20)
     exit(json_encode(array('status'=>'err','reason'=>'File too big. 20MB max')));
 
-$basename = basename($url)
+$basename = basename($url);
 preg_match_all('/(^.*)\?/m', $basename, $matches, PREG_SET_ORDER, 0);
 
 $name = matches[0];
