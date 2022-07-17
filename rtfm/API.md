@@ -204,3 +204,39 @@ Upload local image "test.jpg" to pictshare
   "delete_url": "https://dev.pictshare.net/delete_z0e1mdo8szxnauspxp2f080e4wd4ycf2/lpl119.jpg"
 }
 ```
+
+# getall.php
+- URL https://pictshare.net/api/getall.php
+- Method: GET
+- Answer: JSON
+
+## Example
+
+Get all local images.
+
+```https://pictshare.net/api/getall.php```
+
+```json
+{
+  "status": "ok",
+  "data": [
+    {
+      "hash": "9k3rbw.mp4",
+      "size_bytes": 2513225,
+      "size_interpreted": "2.4 MB",
+      "type": "video/mp4",
+      "type_interpreted": "mp4",
+      "url": "https://dev.pictshare.net/9k3rbw.mp4"
+    }
+    {
+      "hash": "evq1zc.webp",
+      "size_bytes": 13540,
+      "size_interpreted": "13.22 KB",
+      "type": "image/webp",
+      "type_interpreted": "webp",
+      "url": "https://dev.pictshare.net/evq1zc.webp"
+    }
+  ]
+}
+
+```
