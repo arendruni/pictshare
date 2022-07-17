@@ -30,7 +30,10 @@ if ($handle) {
 
 	while (($line = fgets($handle)) !== false) {
 		$hash = trim(substr($line, 41));
-		$data[] = getInfoAboutHash($hash);
+		$data[] = [
+			"hash" => $hash,
+			"url" => URL . $hash,
+		];
 	}
 
 	fclose($handle);
@@ -68,10 +71,10 @@ function getInfoAboutHash($hash)
 
 	return [
 		"hash" => $hash,
+		"url" => URL . $hash,
 		"size_bytes" => $size,
 		"size_interpreted" => $size_hr,
 		"type" => $type,
 		"type_interpreted" => getTypeOfFile($file),
-		"url" => URL . $hash,
 	];
 }
